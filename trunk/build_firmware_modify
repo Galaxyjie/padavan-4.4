@@ -242,6 +242,6 @@ fi
 #	CONFIG_FIRMWARE_INCLUDE_XFRM=y
 #fi
 echo --------------------------MAKE-DEP--------------------------------
-make dep -j 16
+make dep
 echo --------------------------MAKE-ALL--------------------------------
-make -j 16
+make
