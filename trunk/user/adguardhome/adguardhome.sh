@@ -136,9 +136,8 @@ start_adg(){
 	getconfig
 	change_dns
 	set_iptable
-	logger -t "AdGuardHome" "运行AdGuardHome"
 	eval "/usr/bin/AdGuardHome -c $adg_file -w /tmp/AdGuardHome -v" &
-
+  logger -t "AdGuardHome" "运行AdGuardHome"
 }
 stop_adg(){
 #rm -rf /tmp/AdGuardHome
