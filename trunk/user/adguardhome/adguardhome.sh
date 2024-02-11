@@ -132,7 +132,7 @@ fi
 
 start_adg(){
     mkdir -p /tmp/AdGuardHome
-	mkdir -p /etc/storage/AdGuardHome
+	#mkdir -p /etc/storage/AdGuardHome
 	getconfig
 	change_dns
 	set_iptable
