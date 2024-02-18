@@ -3,7 +3,7 @@ THISDIR = $(shell pwd)
 v2ray_dir="v2ray.com/core/main"
 #export GO111MODULE=on
 #export GOPROXY=https://goproxy.baidu.com
-V2ray_VERSION := 4.44.0
+V2ray_VERSION := 4.45.2
 V2ray_URL := https://codeload.github.com/v2fly/v2ray-core/tar.gz/v$(V2ray_VERSION)
 V2RAY_SED_ARGS:=
 V2RAY_SED_ARGS += \
@@ -46,7 +46,7 @@ clean:
 	rm -rf $(THISDIR)/bin
 
 romfs:
-ifeq ($(GITHUB_ACTION),n)	
+ifeq ($(GITHUB_ACTION),n)
 	$(ROMFSINST) -p +x $(THISDIR)/bin/v2ray /usr/bin/v2ray
 else
 	$(ROMFSINST) -p +x $(THISDIR)/v2ray /usr/bin/v2ray
